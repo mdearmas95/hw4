@@ -21,8 +21,8 @@ for c = 1:N %for loop to make coeff matrix
     end
 end
 A;
-F= zeros(N,1);
-for d = 1:N
+F= zeros(N,1); %creates zero matrix for solution
+for d = 1:N %filling in matrix with value using loop and conditional statements
     if d == 1
         F(d,1)= -1 + h^2;
     elseif d== N
@@ -32,11 +32,11 @@ for d = 1:N
     end
 end
 F;
-F_1= F(1:N-1,1);
-A_1= A(1:N-1,1:N-1);
-U= A_1\F_1;
-x= h:h:1-h;
-y=(1-(sinh(k-k*x) + sinh(k*x))/sinh(k))*(1/k^2) + (sinh(k-k*x))/sinh(k);
-p=plot(x,U,'g',x,y,'k')
+F_1= F(1:N-1,1); %reducing matrix since u(L)=0
+A_1= A(1:N-1,1:N-1); %reducing matrix since u(L)=0
+U= A_1\F_1; %solving for u
+x= h:h:1-h; %creating x vector to plot
+y=(1-(sinh(k-k*x) + sinh(k*x))/sinh(k))*(1/k^2) + (sinh(k-k*x))/sinh(k); %given exact function
+p=plot(x,U,'g',x,y,'k') %plotting exact vs approximate value
 p(1).Marker= '*'
 legend('approximate value', 'real value');
