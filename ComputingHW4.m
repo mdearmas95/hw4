@@ -40,3 +40,4 @@ y=(1-(sinh(k-k*x) + sinh(k*x))/sinh(k))*(1/k^2) + (sinh(k-k*x))/sinh(k); %given 
 p=plot(x,U,'g',x,y,'k') %plotting exact vs approximate value
 p(1).Marker= '*'
 legend('approximate value', 'real value');
+%input N=~ 5120 for k=10 and k=100 to obtain results with low error
