@@ -40,4 +40,4 @@ y=(1-(cosh(k*x)/cosh(k)))*(1/k^2) - (1/k)*(sinh(k-k*x))/cosh(k); %given exact fu
 p=plot(x,U,'g',x,y,'k') %plotting exact vs approximate value
 p(1).Marker= '*'
 legend('approximate value', 'real value');
-%input N=~ 5120 for k=10 and k=100 to obtain results with low error
+%input low values for N for k=10 and N=~300 for k=100 to obtain results with low error
