@@ -36,7 +36,7 @@ F_1= F(1:N-1,1); %reducing matrix since u(L)=0
 A_1= A(1:N-1,1:N-1); %reducing matrix since u(L)=0
 U= A_1\F_1; %solving for u
 x= h:h:1-h; %creating x vector to plot
-y=(1-(sinh(k-k*x) + sinh(k*x))/sinh(k))*(1/k^2) + (sinh(k-k*x))/sinh(k); %given exact function
+y=(-1+(sinh(k-k*x) + sinh(k*x))/sinh(k))*(1/k^2) + (sinh(k-k*x))/sinh(k); %given exact function
 p=plot(x,U,'g',x,y,'k') %plotting exact vs approximate value
 p(1).Marker= '*'
 legend('approximate value', 'real value');
